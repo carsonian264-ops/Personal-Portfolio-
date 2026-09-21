@@ -1,199 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carson's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="AIstyle.css">
-    <script src="https://kit.fontawesome.com/1075575ee2.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ian Carson — Full-Stack Engineer</title>
+<meta name="description" content="Ian Carson is a full-stack engineer building modern web applications with JavaScript, React, Node.js and PostgreSQL, and exploring AI/ML with Python.">
+<meta name="theme-color" content="#05070d">
+<link rel="canonical" href="https://carsonian264-ops.github.io/Personal-Portfolio-/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ian Carson — Full-Stack Engineer">
+<meta property="og:description" content="Full-stack engineer building modern web applications with JavaScript, React, Node.js and PostgreSQL, and exploring AI/ML with Python.">
+<meta property="og:url" content="https://carsonian264-ops.github.io/Personal-Portfolio-/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ian Carson — Full-Stack Engineer">
+<meta name="twitter:description" content="Full-stack engineer building modern web applications with JavaScript, React, Node.js and PostgreSQL, and exploring AI/ML with Python.">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="mask-icon" href="favicon.svg" color="#22c1ff">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.github.com; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; base-uri 'self'; form-action 'self'">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
-
 <body>
-    <div id="header">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source
-                src="https://www.shutterstock.com/shutterstock/videos/3795378059/preview/stock-footage-abstract-futuristic-cyber-circle-futuristic-hud-elements-with-ai-chatbot-sci-fi-particle-tunnel.webm"
-                type="video/webm">
-            Your browser does not support the video tag.
-        </video>
 
-        <div class="container">
-            <img src="https://i.pinimg.com/736x/5b/2d/21/5b2d215ec2861a5412b701632452d61b.jpg" class="logo">
+<a class="skip-link" href="#main">Skip to content</a>
 
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#sevices">Services</a></li>
-                    <li><a href="#portfolio">My work</a></li>
-                    <li><a href="#content">Contact</a></li>
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </ul>
-                <i class="fa-solid fa-bars"></i>
-            </nav>
-            <div class="header-text">
-                <p>FULL-STACK ENGINEER </p>
-                <h1>Hi!😁 my name is IanCarson </h1>
+<!-- ============ ICON SPRITE ============ -->
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M9 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.22-3.37-1.22-.46-1.19-1.11-1.51-1.11-1.51-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.36 1.11 2.93.85.09-.66.35-1.11.64-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 8.5H3.56V20.5h3.38V8.5ZM5.25 3a1.96 1.96 0 1 0 0 3.92A1.96 1.96 0 0 0 5.25 3ZM20.5 20.5h-3.37v-6.15c0-1.47-.03-3.36-2.05-3.36-2.05 0-2.36 1.6-2.36 3.25v6.26H9.34V8.5h3.24v1.64h.05c.45-.85 1.56-1.75 3.2-1.75 3.42 0 4.67 2.25 4.67 5.18v6.93Z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m0 0-5-5m5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m7 10 3 2.5L7 15M12 15h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m9 8-5 4 5 4M15 8l5 4-5 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="7" r="1" fill="currentColor"/><circle cx="7" cy="17" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.2 7.7 8 9 4.8-1.3 8-4.5 8-9V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="9.5" y="9.5" width="5" height="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 2.5m11-10L13.5 20l-2.5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8V4m-3 0h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="14" r="1.4" fill="currentColor"/><circle cx="15" cy="14" r="1.4" fill="currentColor"/><path d="M9 17.5h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="m15 9-2 6-6 2 2-6 6-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m3 13 9 5 9-5M3 18l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a href="#home" class="brand" aria-label="Ian Carson — home">
+      <span class="brand-mark" aria-hidden="true">IC</span>
+      <span class="brand-name">Ian Carson</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#home" class="nav-link" data-nav>Home</a></li>
+        <li><a href="#about" class="nav-link" data-nav>About</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+        <li><a href="#engineering" class="nav-link" data-nav>Engineering</a></li>
+        <li><a href="#ai" class="nav-link" data-nav>AI</a></li>
+        <li><a href="#journey" class="nav-link" data-nav>Journey</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-ghost header-cta">Get in touch</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-grid"></div>
+    <div class="hero-glow hero-glow--cyan"></div>
+    <div class="hero-glow hero-glow--purple"></div>
+  </div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Available for opportunities</p>
+      <h1 class="hero-title">Ian Carson<br><span class="hero-title-role">Full-Stack Engineer</span></h1>
+      <p class="hero-lede">
+        I build modern web applications end to end — responsive interfaces, REST APIs, and
+        PostgreSQL-backed systems — and I'm extending that into AI and machine learning with Python.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          View my work <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        </a>
+        <a href="https://github.com/carsonian264-ops" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> GitHub
+        </a>
+        <button class="btn btn-ghost" id="cv-btn" type="button" disabled aria-describedby="cv-note">
+          <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> Download CV
+        </button>
+      </div>
+      <p class="hero-note" id="cv-note">CV not uploaded yet — this button will activate once one is added.</p>
+
+      <ul class="tech-badges" aria-label="Core technologies">
+        <li>JavaScript</li><li>React</li><li>Node.js</li><li>Express</li>
+        <li>PostgreSQL</li><li>Python</li><li>REST APIs</li><li>Git</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual reveal" style="--reveal-delay:120ms">
+      <div class="terminal-window" role="img" aria-label="Terminal window showing a summary: role full-stack engineer, current focus full-stack plus AI, status building">
+        <div class="terminal-titlebar">
+          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+          <span class="terminal-title">carson@developer:~</span>
+        </div>
+        <pre class="terminal-body" id="hero-terminal" aria-hidden="true"></pre>
+      </div>
+      <div class="status-card glass">
+        <span class="pulse" aria-hidden="true"></span>
+        <div>
+          <p class="status-card-title">System status</p>
+          <p class="status-card-value">Building · Learning · Improving</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+    <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="section-kicker">About</p>
+      <h2 class="section-title">The developer behind the code</h2>
+    </header>
+
+    <div class="bento about-bento">
+      <article class="bento-card bento-card--lg glass reveal">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-compass"></use></svg>
+        <h3>Who I am</h3>
+        <p>I'm Ian Carson, a full-stack engineer based in Kenya. I'm on a self-directed path into
+        professional software engineering, building real projects with JavaScript and Python as I go
+        rather than just studying theory.</p>
+      </article>
+
+      <article class="bento-card glass reveal" style="--reveal-delay:60ms">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-code"></use></svg>
+        <h3>What I build</h3>
+        <p>Web applications with a JavaScript front end, an Express API layer, and a PostgreSQL database
+        behind it — built end to end, not just styled mockups.</p>
+      </article>
+
+      <article class="bento-card glass reveal" style="--reveal-delay:120ms">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-cpu"></use></svg>
+        <h3>Current focus</h3>
+        <p>Deepening full-stack fundamentals while building working knowledge of AI and machine learning
+        with Python, NumPy, pandas, and scikit-learn.</p>
+      </article>
+
+      <article class="bento-card glass reveal" style="--reveal-delay:180ms">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-layers"></use></svg>
+        <h3>My approach</h3>
+        <ol class="approach-steps">
+          <li>Learn</li><li>Build</li><li>Test</li><li>Improve</li>
+        </ol>
+      </article>
+
+      <article class="bento-card glass reveal" style="--reveal-delay:240ms">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+        <h3>Location</h3>
+        <p>Kenya · working remotely</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section--alt" id="skills">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="section-kicker">Tech Stack</p>
+      <h2 class="section-title">Technologies I work with</h2>
+      <p class="section-sub">Grouped by area, and labeled by how deep that experience actually goes — no invented percentages.</p>
+    </header>
+
+    <div class="stack-grid">
+      <div class="stack-group glass reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg> Frontend</h3>
+        <ul class="chip-list">
+          <li class="chip chip--core">HTML <span class="chip-tag">Core</span></li>
+          <li class="chip chip--core">CSS <span class="chip-tag">Core</span></li>
+          <li class="chip chip--core">JavaScript <span class="chip-tag">Core</span></li>
+          <li class="chip chip--working">React <span class="chip-tag">Working with</span></li>
+          <li class="chip chip--learning">Redux / Redux Toolkit <span class="chip-tag">Learning</span></li>
+        </ul>
+      </div>
+
+      <div class="stack-group glass reveal" style="--reveal-delay:60ms">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-server"></use></svg> Backend</h3>
+        <ul class="chip-list">
+          <li class="chip chip--working">Node.js <span class="chip-tag">Working with</span></li>
+          <li class="chip chip--working">Express.js <span class="chip-tag">Working with</span></li>
+          <li class="chip chip--working">REST APIs <span class="chip-tag">Working with</span></li>
+          <li class="chip chip--learning">Authentication (Sessions) <span class="chip-tag">Learning</span></li>
+          <li class="chip chip--learning">OAuth <span class="chip-tag">Learning</span></li>
+        </ul>
+      </div>
+
+      <div class="stack-group glass reveal" style="--reveal-delay:120ms">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-database"></use></svg> Database</h3>
+        <ul class="chip-list">
+          <li class="chip chip--working">PostgreSQL <span class="chip-tag">Working with</span></li>
+          <li class="chip chip--working">SQL <span class="chip-tag">Working with</span></li>
+          <li class="chip chip--learning">Normalization <span class="chip-tag">Learning</span></li>
+          <li class="chip chip--learning">Indexes <span class="chip-tag">Learning</span></li>
+          <li class="chip chip--learning">Triggers <span class="chip-tag">Learning</span></li>
+        </ul>
+      </div>
+
+      <div class="stack-group glass reveal" style="--reveal-delay:180ms">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-terminal"></use></svg> Tools</h3>
+        <ul class="chip-list">
+          <li class="chip chip--core">Git <span class="chip-tag">Core</span></li>
+          <li class="chip chip--core">GitHub <span class="chip-tag">Core</span></li>
+          <li class="chip chip--learning">Postman <span class="chip-tag">Learning</span></li>
+          <li class="chip chip--learning">Swagger / OpenAPI <span class="chip-tag">Learning</span></li>
+        </ul>
+      </div>
+
+      <div class="stack-group glass reveal" style="--reveal-delay:240ms">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-cpu"></use></svg> AI / Data</h3>
+        <ul class="chip-list">
+          <li class="chip chip--learning">Python <span class="chip-tag">Learning</span></li>
+          <li class="chip chip--learning">NumPy <span class="chip-tag">Learning</span></li>
+          <li class="chip chip--learning">pandas <span class="chip-tag">Learning</span></li>
+          <li class="chip chip--learning">scikit-learn <span class="chip-tag">Learning</span></li>
+          <li class="chip chip--learning">ML fundamentals <span class="chip-tag">Learning</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="chip-legend">
+      <span class="chip-legend-item"><i class="chip-dot chip-dot--core"></i>Core — confident, daily use</span>
+      <span class="chip-legend-item"><i class="chip-dot chip-dot--working"></i>Working with — used in real projects</span>
+      <span class="chip-legend-item"><i class="chip-dot chip-dot--learning"></i>Learning — actively studying</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="section-kicker">Projects</p>
+      <h2 class="section-title">What I can actually build</h2>
+      <p class="section-sub">Real, working projects — no stock photos, no fabricated case studies.</p>
+    </header>
+
+    <div class="project-grid">
+      <article class="project-card glass reveal">
+        <div class="project-media">
+          <div class="project-mock" aria-hidden="true">
+            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+            <div class="project-mock-lines">
+              <span style="width:70%"></span><span style="width:45%"></span><span style="width:85%"></span><span style="width:30%"></span>
             </div>
+          </div>
+          <span class="badge badge--live">Live</span>
         </div>
+        <div class="project-body">
+          <h3>Personal Portfolio</h3>
+          <p>This site. A hand-built, dependency-free portfolio — semantic HTML, a custom design system in
+          CSS, and vanilla JavaScript for the terminal, live GitHub panel, and AI assistant.</p>
+          <ul class="badge-row" aria-label="Technologies used">
+            <li class="tech-chip">HTML</li><li class="tech-chip">CSS</li><li class="tech-chip">JavaScript</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/carsonian264-ops/Personal-Portfolio-" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> GitHub
+            </a>
+            <button type="button" class="btn btn-ghost btn-sm" data-case-study="portfolio">
+              Case study <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card project-card--empty glass reveal" style="--reveal-delay:80ms">
+        <div class="project-empty-inner">
+          <svg class="icon icon--lg" aria-hidden="true"><use href="#i-layers"></use></svg>
+          <h3>Next project — in progress</h3>
+          <p>This slot is reserved for the next real build. No placeholder screenshots, no invented results —
+          it'll appear here once it ships.</p>
+          <span class="badge badge--soon">Coming soon</span>
+        </div>
+      </article>
     </div>
-    <!-- about -->
-    <div id="about">
-        <div class="container">
-            <div class="roe">
-                <div class="about-col-1">
-                    <img
-                        src="https://scontent-mba2-1.xx.fbcdn.net/v/t1.15752-9/640103941_918661097579590_1719699525008574288_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOmNvbnRyb2wiXX0%3D&_nc_ohc=5wclWCgYDl8Q7kNvwFUj72H&_nc_oc=AdnJX9-4EnPpPLqLuYMPrtY5boPQFX_stVcKqc2MJy39_G3GKyELHtwImbhjDT_I4FY&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_ss=8&oh=03_Q7cD4wG9_11kcdasNBZ_FDUxliAlLv4OIbNN7fACUkd_G2vnow&oe=69D4F14B">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>My name is IanCarson am from Kenya and i am currently on a career path to becoming a fullstack
-                        engineer.
-                        I have learnt this career path from code academy.
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span class="end">Front-end developer</span><br>Creating front-end application.</li>
-                            <li><span class="end">Back-end developer</span><br>Creating back-end operations.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span class="end">My Experience</span><br>I have gained experience through doing
-                                practice as I learn on the codecademy's website.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span class="end">My Educational life</span><br>I have been studying Full-stack
-                                engineering on the codecademy's website.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </div>
+</section>
+
+<!-- Case study dialog -->
+<dialog class="case-study" id="case-study-portfolio">
+  <form method="dialog" class="case-study-inner">
+    <button class="case-study-close" type="submit" aria-label="Close case study">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+    <p class="section-kicker">Case study</p>
+    <h3>Personal Portfolio</h3>
+
+    <dl class="case-study-grid">
+      <div><dt>The problem</dt><dd>My previous portfolio was built from a generic tutorial template: broken
+      script/stylesheet references, hotlinked stock photography standing in for real project screenshots, and
+      dead <code>#</code> links. It didn't represent real work or reflect how I actually build software.</dd></div>
+
+      <div><dt>The solution</dt><dd>A rebuild from the ground up — a project-first layout, an honest tech-stack
+      breakdown, a live GitHub activity panel, and a rule-based AI assistant — built with zero UI frameworks and
+      zero external image dependencies.</dd></div>
+
+      <div><dt>Technologies</dt><dd>Semantic HTML5, hand-written CSS (custom properties, bento grid, container-aware
+      responsive layout), and vanilla JavaScript (IntersectionObserver for scroll reveals, the Fetch API for live
+      GitHub data, a small canvas particle field).</dd></div>
+
+      <div><dt>Features</dt><dd>Sticky accessible navigation, a typing-animated terminal hero, a live GitHub
+      activity panel, an interactive command-driven terminal, and a floating AI assistant with suggested
+      questions.</dd></div>
+
+      <div><dt>Architecture</dt><dd>Static site, no build step or backend. JavaScript is split by concern —
+      navigation/reveal logic, the terminal engine, the GitHub panel, and the AI assistant — so each piece can be
+      swapped independently (e.g. pointing the assistant at a real API later).</dd></div>
+
+      <div><dt>Challenges</dt><dd>Keeping the futuristic visual language (glow, glass, grid) from overpowering
+      readability and contrast, and building an interactive terminal that's genuinely accessible to keyboard and
+      screen-reader users.</dd></div>
+
+      <div><dt>Lessons</dt><dd>A restrained, token-driven design system scales better than one-off styling per
+      section — and honesty about what's "real data" vs. "demo" makes a portfolio more credible, not less.</dd></div>
+    </dl>
+
+    <div class="project-links">
+      <a href="https://github.com/carsonian264-ops/Personal-Portfolio-" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+        <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> View source
+      </a>
+    </div>
+  </form>
+</dialog>
+
+<!-- ============ ENGINEERING ============ -->
+<section class="section section--alt" id="engineering">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="section-kicker">Engineering</p>
+      <h2 class="section-title">What I can build</h2>
+    </header>
+
+    <div class="capability-grid">
+      <article class="capability-card glass reveal">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-code"></use></svg>
+        <h3>Frontend engineering</h3>
+        <p>Responsive interfaces, component-driven structure, and state management with React.</p>
+      </article>
+      <article class="capability-card glass reveal" style="--reveal-delay:60ms">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-server"></use></svg>
+        <h3>Backend engineering</h3>
+        <p>Node.js and Express services, route design, and server-side application logic.</p>
+      </article>
+      <article class="capability-card glass reveal" style="--reveal-delay:120ms">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-database"></use></svg>
+        <h3>Database engineering</h3>
+        <p>SQL and PostgreSQL schema design — normalization, indexes, and triggers.</p>
+      </article>
+      <article class="capability-card glass reveal" style="--reveal-delay:180ms">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-terminal"></use></svg>
+        <h3>API development</h3>
+        <p>REST API design, third-party API integration, and clear API documentation.</p>
+      </article>
+      <article class="capability-card glass reveal" style="--reveal-delay:240ms">
+        <svg class="icon icon--accent" aria-hidden="true"><use href="#i-shield"></use></svg>
+        <h3>Authentication</h3>
+        <p>Session-based auth and OAuth concepts applied to real sign-in flows.</p>
+      </article>
     </div>
 
-    <!-- services -->
-
-    <div id="sevices">
-        <div class="container">
-            <h1 class="sub-title">My services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>I am able to provide the service of designing websites</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>Website creation</h2>
-                    <p>I am able to provide the service of creating websites</p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
-        </div>
+    <div class="workflow">
+      <h3 class="workflow-title reveal">How I build</h3>
+      <ol class="workflow-steps">
+        <li class="reveal"><span class="workflow-num">01</span>Understand</li>
+        <li class="reveal" style="--reveal-delay:40ms"><span class="workflow-num">02</span>Plan</li>
+        <li class="reveal" style="--reveal-delay:80ms"><span class="workflow-num">03</span>Design</li>
+        <li class="reveal" style="--reveal-delay:120ms"><span class="workflow-num">04</span>Build</li>
+        <li class="reveal" style="--reveal-delay:160ms"><span class="workflow-num">05</span>Test</li>
+        <li class="reveal" style="--reveal-delay:200ms"><span class="workflow-num">06</span>Debug</li>
+        <li class="reveal" style="--reveal-delay:240ms"><span class="workflow-num">07</span>Deploy</li>
+        <li class="reveal" style="--reveal-delay:280ms"><span class="workflow-num">08</span>Improve</li>
+      </ol>
     </div>
 
-    <!-- Portfoli -->
+    <div class="bento currently-building">
+      <article class="bento-card glass reveal">
+        <h3>Currently building</h3>
+        <ul class="focus-list">
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span>Full-stack engineering fundamentals</li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span>AI-powered application concepts</li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span>Machine learning basics with Python</li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span>Backend / API development</li>
+          <li><span class="status-dot status-dot--sm" aria-hidden="true"></span>This portfolio, iteratively</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work.</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img
-                        src="https://www.shutterstock.com/image-photo/jakarta-indonesia-may-24-2024-260nw-2467064359.jpg">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>I have created apps with the intentions of connecting people together</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img
-                        src="https://www.shutterstock.com/image-vector/fluid-gradient-landing-page-website-260nw-2582435971.jpg">
-                    <div class="layer">
-                        <h3>Website</h3>
-                        <p>I have created websites</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">See More</a>
+<!-- ============ AI + GITHUB ============ -->
+<section class="section" id="ai">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="section-kicker">Developer Console</p>
+      <h2 class="section-title">Live GitHub activity &amp; a terminal you can use</h2>
+    </header>
+
+    <div class="console-grid">
+      <div class="glass console-card reveal" id="github-panel" aria-live="polite">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Developer activity</h3>
+        <div id="github-content" class="github-content">
+          <div class="github-skeleton" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <p class="sr-only">Loading live GitHub data…</p>
         </div>
+      </div>
+
+      <div class="glass console-card reveal" style="--reveal-delay:80ms">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-terminal"></use></svg> Interactive terminal</h3>
+        <div class="dev-terminal">
+          <div class="dev-terminal-titlebar">
+            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+            <span class="terminal-title">carson@developer:~</span>
+          </div>
+          <div class="dev-terminal-log" id="dev-terminal-log" role="log" aria-live="polite" aria-label="Terminal output"></div>
+          <label class="sr-only" for="dev-terminal-input">Terminal command input</label>
+          <div class="dev-terminal-input-row">
+            <span aria-hidden="true">&gt;</span>
+            <input id="dev-terminal-input" type="text" autocomplete="off" spellcheck="false"
+              placeholder="type 'help' and press enter">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="section section--alt" id="journey">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="section-kicker">Learning Journey</p>
+      <h2 class="section-title">Still very much in progress</h2>
+      <p class="section-sub">A self-taught path, not a professional employment history.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="timeline-item reveal"><span class="timeline-dot"></span><h3>HTML &amp; CSS</h3><p>Structure and styling fundamentals.</p></li>
+      <li class="timeline-item reveal" style="--reveal-delay:40ms"><span class="timeline-dot"></span><h3>JavaScript</h3><p>Core language, DOM, and interactivity.</p></li>
+      <li class="timeline-item reveal" style="--reveal-delay:80ms"><span class="timeline-dot"></span><h3>React</h3><p>Component-based interfaces and state.</p></li>
+      <li class="timeline-item reveal" style="--reveal-delay:120ms"><span class="timeline-dot"></span><h3>Node.js &amp; Express</h3><p>Server-side JavaScript and routing.</p></li>
+      <li class="timeline-item reveal" style="--reveal-delay:160ms"><span class="timeline-dot"></span><h3>PostgreSQL</h3><p>Relational databases and SQL.</p></li>
+      <li class="timeline-item reveal" style="--reveal-delay:200ms"><span class="timeline-dot"></span><h3>REST APIs</h3><p>Designing and consuming APIs.</p></li>
+      <li class="timeline-item reveal" style="--reveal-delay:240ms"><span class="timeline-dot"></span><h3>Authentication</h3><p>Sessions and OAuth fundamentals.</p></li>
+      <li class="timeline-item reveal" style="--reveal-delay:280ms"><span class="timeline-dot"></span><h3>Git &amp; GitHub</h3><p>Version control and collaboration.</p></li>
+      <li class="timeline-item reveal" style="--reveal-delay:320ms"><span class="timeline-dot"></span><h3>Deployment</h3><p>Shipping projects so others can use them.</p></li>
+      <li class="timeline-item reveal timeline-item--current" style="--reveal-delay:360ms"><span class="timeline-dot"></span><h3>AI / Machine Learning <span class="badge badge--live">Now</span></h3><p>Python, NumPy, pandas, and scikit-learn.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <p class="section-kicker">Contact</p>
+      <h2 class="section-title">Let's talk</h2>
+      <p class="section-sub">The fastest way to reach me is email.</p>
+
+      <ul class="contact-list">
+        <li>
+          <a href="mailto:carsonian264@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> carsonian264@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/carsonian264-ops" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> github.com/carsonian264-ops
+          </a>
+        </li>
+        <li class="contact-list-disabled" aria-disabled="true">
+          <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg> LinkedIn
+          <span class="badge badge--soon">Not linked yet</span>
+        </li>
+      </ul>
     </div>
 
-    <!-- contact -->
-    <div id="content">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-regular fa-envelope"></i>carsonian264@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>0119210043</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Made by Iancarson, front-end developer</p>
-        </div>
+    <form class="contact-form glass reveal" id="contact-form" style="--reveal-delay:100ms" novalidate>
+      <p class="form-note">This form opens your email client with the message pre-filled — there's no backend
+      wired up yet, so nothing is silently sent anywhere.</p>
+
+      <div class="field">
+        <label for="cf-name">Your name</label>
+        <input id="cf-name" name="name" type="text" required autocomplete="name">
+        <span class="field-error" id="cf-name-error"></span>
+      </div>
+      <div class="field">
+        <label for="cf-email">Your email</label>
+        <input id="cf-email" name="email" type="email" required autocomplete="email">
+        <span class="field-error" id="cf-email-error"></span>
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="5" required></textarea>
+        <span class="field-error" id="cf-message-error"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        Send message <svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg>
+      </button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="brand-name">Ian Carson</p>
+      <p class="footer-role">Full-Stack Engineer</p>
     </div>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <!-- AI Assistant Icon -->
-    <div id="ai-icon" onclick="toggleAssistant()">🤖</div>
-
-    <!-- AI Assistant Chat -->
-    <div id="ai-assistant">
-
-        <div class="ai-header">
-            IanCarson AI Assistant
-            <span id="close-ai" onclick="toggleAssistant()">✖</span>
-        </div>
-
-        <div id="chat-box"></div>
-
-        <div class="ai-input-area">
-            <input id="user-input" type="text" placeholder="Ask about Ian..." />
-            <button onclick="sendMessage()">Send</button>
-        </div>
-
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#engineering">Engineering</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-links">
+      <a href="https://github.com/carsonian264-ops" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+      </a>
+      <a href="mailto:carsonian264@gmail.com" aria-label="Email">
+        <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+      </a>
     </div>
-    <script src="assistant.js"></script>
+  </div>
+  <p class="footer-copy">© <span id="footer-year"></span> Ian Carson. Built from scratch, no templates.</p>
+</footer>
+
+<!-- ============ AI ASSISTANT ============ -->
+<button class="ai-toggle" id="ai-toggle" aria-expanded="false" aria-controls="ai-panel" aria-label="Open AI assistant">
+  <svg class="icon" aria-hidden="true"><use href="#i-bot"></use></svg>
+</button>
+
+<section class="ai-panel" id="ai-panel" aria-label="AI assistant" hidden>
+  <header class="ai-panel-header">
+    <div>
+      <p class="ai-panel-title">Ian Carson AI</p>
+      <p class="ai-panel-sub">Local demo assistant · not connected to a live API</p>
+    </div>
+    <div class="ai-panel-actions">
+      <button type="button" id="ai-clear" aria-label="Clear conversation">Clear</button>
+      <button type="button" id="ai-close" aria-label="Close assistant">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="ai-log" id="ai-log" role="log" aria-live="polite"></div>
+
+  <div class="ai-suggestions" id="ai-suggestions">
+    <button type="button" data-q="What can he build?">What can he build?</button>
+    <button type="button" data-q="What technologies does he use?">What technologies?</button>
+    <button type="button" data-q="Show projects">Show projects</button>
+    <button type="button" data-q="How do I contact Carson?">Contact Carson</button>
+  </div>
+
+  <form class="ai-input-row" id="ai-form">
+    <label class="sr-only" for="ai-input">Ask the assistant a question</label>
+    <input id="ai-input" type="text" autocomplete="off" placeholder="Ask something…">
+    <button type="submit" aria-label="Send">
+      <svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg>
+    </button>
+  </form>
+</section>
+
+<script src="main.js" defer></script>
+<script src="terminal.js" defer></script>
+<script src="github.js" defer></script>
+<script src="assistant.js" defer></script>
 </body>
-
 </html>
